@@ -10,7 +10,6 @@ import UpdateProject from "./pages/UpdateProject";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getUser } from "./store/slices/userSlice";
-import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import { getAllSkills } from "./store/slices/skillSlice";
 import { getAllSoftwareApplications } from "./store/slices/softwareApplicationSlice";
@@ -21,6 +20,7 @@ import { getAllProjects } from "./store/slices/projectSlice";
 import ViewProject from "./pages/ViewProject";
 import HomePage from "./pages/Homepage";
 import ManageProjects from "./pages/ManageProject";
+import ForgotPassword from "./pages/forgotPassword";
 
 function App() {
   const dispatch = useDispatch();
@@ -38,7 +38,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/login" element={<Login />} />
-        <Route path="/password/forgot" element={<ForgotPassword />} />
+        <Route path="/password/forgot" element={<ForgotPassword/>} />
         <Route path="/password/reset/:token" element={<ResetPassword />} />
         <Route path="/manage/skills" element={<ManageSkills />} />
         <Route path="/manage/timeline" element={<ManageTimeline />} />
